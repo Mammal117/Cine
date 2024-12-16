@@ -1,0 +1,22 @@
+Nuestro proyecto consiste en el desarrollo de la interfaz principal de un sistema de cine, abarcando todo el proceso desde el inicio de sesión hasta la compra o renta de películas. El sistema permite a los usuarios registrarse o iniciar sesión para acceder a una plataforma donde pueden explorar las funciones disponibles, consultar horarios, seleccionar asientos y realizar pagos para comprar boletos o alquilar funciones.
+
+La interfaz está diseñada para ser intuitiva, brindando al usuario una experiencia fluida y agradable. Desde el momento en que se loguean, los usuarios tienen acceso a menús bien organizados que les permiten gestionar su cuenta, ver las películas en cartelera y las próximas funciones, así como obtener detalles adicionales como la duración, sinopsis o clasificación de cada película.
+
+
+En este proyecto hemos organizado el código en diferentes paquetes para mantener una estructura clara y modular. Esta organización facilita el desarrollo, mantenimiento y escalabilidad del sistema. A continuación, se describe cada paquete y su funcionalidad en el proyecto:
+
+El paquete **components** se utiliza para almacenar los componentes principales relacionados con el diseño de la interfaz del proyecto. Aquí se incluyen los elementos visuales y las estructuras que dan forma a las vistas que interactúan con los usuarios. Este paquete actúa como la base de la capa de presentación, permitiendo una separación entre la lógica de diseño y las demás funcionalidades del sistema.
+
+Otro paquete importante también denominado **components** se encarga de la conexión con la base de datos. Este paquete gestiona la comunicación entre la aplicación y la base de datos, asegurando que las operaciones como consultas, inserciones y actualizaciones se realicen correctamente. Su principal función es proporcionar un acceso seguro y eficiente a los datos del sistema, sirviendo como puente entre la lógica de negocio y el almacenamiento persistente.
+
+El tercer paquete **components** está dedicado a la lógica que gestiona las funciones y películas en el sistema. Este paquete incluye las funcionalidades necesarias para adherir nuevas funciones, gestionar la información de películas, cancelar tickets cuando sea necesario y también obtener tickets para las proyecciones disponibles. Aquí se concentra la lógica relacionada con el flujo operativo del sistema.
+
+El paquete **icon** contiene los recursos gráficos utilizados en el sistema, como imágenes e íconos. Estas imágenes son empleadas en diferentes partes del programa para mejorar la experiencia del usuario. Por ejemplo, se encuentran íconos que representan al usuario, menús y otras funcionalidades específicas, permitiendo una interacción más visual y comprensible.
+
+En el paquete **main** se encuentran las clases principales que se encargan de ejecutar el sistema. Este paquete incluye dos interfaces principales: una para el administrador y otra para el cliente. La interfaz del administrador permite gestionar funciones, eliminarlas y monitorear su estado en tiempo real. Por otro lado, la interfaz del cliente ofrece las opciones necesarias para comprar boletos y realizar pagos de manera sencilla. El paquete también contiene el método `main` general que se encarga de unificar ambas interfaces y coordinar su ejecución en el sistema.
+
+El paquete **model** está destinado a los modelos de datos que representan las entidades fundamentales del sistema. Aquí se encuentran las clases que definen la estructura de los datos y su comportamiento, como el modelo para el login, los mensajes, las tarjetas, los menús, las salas, los tickets y los usuarios. Este paquete asegura que los datos estén organizados y sean fáciles de manejar en las diferentes capas del proyecto.
+
+Finalmente, el paquete **mail service** se encarga de la funcionalidad relacionada con el envío de correos electrónicos. Su principal objetivo es enviar notificaciones y mensajes importantes a las direcciones de correo registradas por los usuarios. Esto incluye confirmaciones de compra, recordatorios y cualquier otra comunicación relevante.
+
+Con esta estructura, el proyecto está diseñado para ser modular, claro y eficiente, permitiendo que cada componente cumpla con una responsabilidad específica dentro del sistema. Esto no solo mejora la legibilidad del código, sino que también facilita la colaboración entre los desarrolladores y el crecimiento futuro del proyecto.
