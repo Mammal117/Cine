@@ -975,13 +975,3 @@ Una característica destacada son los mensajes emergentes que informan al usuari
 
 El flujo principal de la aplicación comienza con la ventana principal que muestra el panel de bienvenida. Desde aquí, el usuario puede registrarse o iniciar sesión. Cada acción está respaldada por validaciones tanto visuales como lógicas, asegurando que las transiciones sean fluidas y las respuestas sean claras. En caso de errores, como un código de registro incorrecto o credenciales inválidas, la aplicación responde con mensajes específicos, lo que mejora la experiencia del usuario.
 
-
-
-
-
-
-
-
-
-
-
