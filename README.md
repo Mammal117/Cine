@@ -1,10 +1,12 @@
-![2024-12-17 21_12_57-](https://github.com/user-attachments/assets/5a87cc34-b14b-417d-a905-127c57deb1af)Este código es una aplicación gráfica que funciona como sistema de administración para un cine. Permite a un administrador gestionar salas, películas, funciones y su perfil mediante una interfaz gráfica en Java Swing. La ventana principal tiene un menú lateral con diferentes opciones, y al seleccionar una, se muestra el contenido correspondiente en el panel principal.
+
+Este código es una aplicación gráfica que funciona como sistema de administración para un cine. Permite a un administrador gestionar salas, películas, funciones y su perfil mediante una interfaz gráfica en Java Swing. La ventana principal tiene un menú lateral con diferentes opciones, y al seleccionar una, se muestra el contenido correspondiente en el panel principal.
 
 El programa carga datos desde clases que simulan una base de datos, como Sala, Pelicula y Funcion, y los muestra en formularios gráficos donde el administrador puede visualizarlos o modificarlos. Por ejemplo, al seleccionar "salas", se cargan las salas existentes y se muestran para editar o agregar nuevas. Algo similar ocurre con las películas y funciones.
 
 El flujo general es: se inicia la aplicación, se abre la ventana principal, y el menú permite navegar entre las diferentes funciones de gestión. Además, el sistema permite cerrar sesión y regresar a una ventana de inicio de sesión. Todo está organizado en componentes y métodos para que cada acción del administrador se traduzca en un cambio en la interfaz gráfica y los datos.
+![2024-12-17 20_52_40-](https://github.com/user-attachments/assets/83ed3f2c-8063-4597-899b-6705edadd995)
+![2024-12-17 20_52_27-](https://github.com/user-attachments/assets/af575562-7845-4f03-b784-c2e226c24ae7)
 
-![2024-12-17 20_53_25-](https://github.com/user-attachments/assets/a3fef882-adb1-4d25-a8c5-3210ebfcd614)
 package com.raven.main;
 
 import com.raven.event.EventMenuSelected;
@@ -334,31 +336,26 @@ public class Administrador extends javax.swing.JFrame {
     // End of variables declarati on                    
 }    
 
-
-
-![2024-12-17 20_53_42-](https://github.com/user-attachments/assets/eb0a4fe2-39bb-4f05-9178-030295cb5070)
-
+![2024-12-17 21_12_57-](https://github.com/user-attachments/assets/df81e5d1-4eea-466b-a9eb-8c32936a26f2)
 
 El programa también implementa un sistema de eventos para manejar interacciones del usuario. Por ejemplo, cuando se selecciona una opción del menú lateral, se ejecuta un método que carga los datos necesarios y actualiza el panel principal. Esto asegura que la aplicación responde en tiempo real a las acciones del administrador.
 
 Además, hay un manejo básico de conexión a una base de datos a través de la clase DatabaseOperation. Aunque no se muestra el código completo de esta clase, sugiere que los datos de las películas, funciones y salas se almacenan en algún lugar externo, probablemente una base de datos real o simulada. La aplicación interactúa con estas clases para consultar o actualizar los datos según sea necesario.
+![2024-12-17 21_13_52-](https://github.com/user-attachments/assets/d5a98be4-a680-4502-8ab5-19dd328bfdeb)
+
 
 Por último, incluye una funcionalidad para gestionar sesiones de usuario. El administrador que ingresa a la aplicación se representa con un objeto de la clase ModelUser, que guarda información como su ID, nombre y correo. Esto permite personalizar la experiencia (como mostrar un perfil único) y controlar quién tiene acceso a la administración.
 
 En resumen, el código combina interfaz gráfica, manejo de datos y lógica de negocio para crear una herramienta de gestión flexible y modular.
 
-![2024-12-17 20_54_26-](https://github.com/user-attachments/assets/0bf08851-5202-4e32-ba53-88bf3243dc07)
 
 El administrador puede agregar, modificar o eliminar información sobre las salas donde se proyectan películas, asegurándose de que todas estén configuradas correctamente. También puede registrar nuevas películas en el sistema, actualizarlas o eliminarlas según sea necesario, lo que le permite mantener actualizado el catálogo de películas disponibles.
 
 Además, el administrador puede programar funciones, asociándolas con una sala y una película específicas, y configurar horarios para estas proyecciones. También tiene la posibilidad de visualizar toda la información registrada, como las salas, las películas y las funciones, lo que facilita la supervisión de los datos.
 
 Desde la perspectiva personal, el administrador puede consultar su información de perfil y cerrar sesión cuando lo desee. Al cerrar sesión, la aplicación regresa al menú de inicio, permitiendo que otro usuario pueda acceder. Finalmente, existe una función relacionada con la gestión de boletos, que podría ser utilizada para supervisar o simular la venta de entradas. En resumen, el administrador tiene control absoluto sobre la configuración y operación del sistema.
-![2024-12-17 21_11_57-](https://github.com/user-attachments/assets/b8562c51-dade-4c27-a0b5-0d2279685c03)
-![2024-12-17 21_11_35-](https://github.com/user-attachments/assets/b0f7cb74-f08d-4a14-8617-ad3c162cf762)
-
-
-
+![2024-12-17 21_15_32-](https://github.com/user-attachments/assets/ebf39875-1557-44f5-964a-ecb0d4ab1528)
+![2024-12-17 21_16_05-Ticket_37 pdf](https://github.com/user-attachments/assets/a0d31a77-1e5d-4b35-ac43-32628129faf5)
 
 Customer
 
@@ -608,11 +605,15 @@ public class Customer extends javax.swing.JFrame {
     // End of variables declaration                   
 }
 
+![2024-12-17 20_53_42-](https://github.com/user-attachments/assets/02ef2b2a-6be6-4e06-aaa8-8f0693505785)
+
+
 La clase Customer es una implementación en Java que define la interfaz gráfica y las funcionalidades específicas para los usuarios que interactúan con un sistema, presumiblemente un cine o sistema de tickets. Su propósito principal es gestionar la experiencia del cliente mediante un menú interactivo y dinámico que permite acceder a diferentes funcionalidades según las necesidades del usuario.
 
 El sistema utiliza un diseño basado en eventos, donde al seleccionar un elemento del menú, se cargan diferentes formularios o vistas dentro del panel principal de la interfaz. Estas vistas incluyen el perfil del usuario, una lista de funciones disponibles (películas u otros eventos), un formulario para la creación de boletos y otra vista para revisar detalles de boletos adquiridos.
 
 El constructor principal de la clase recibe un objeto ModelUser, que representa al cliente actual. Este objeto permite personalizar las funcionalidades según los datos específicos del usuario, como su identificación y privilegios. Además, se inicializan varias instancias de clases relacionadas con formularios (Perfil, DisplayFunctions, GetTicket, y GetTicketDetails) para manejar tareas específicas dentro del sistema.
+![2024-12-17 20_54_26-](https://github.com/user-attachments/assets/dca39e40-6383-46ce-9108-38e7bf95bbde)
 
 El sistema incluye métodos dedicados para cargar datos dinámicamente. Por ejemplo, el método loadFuncionesData se encarga de obtener información sobre funciones disponibles y enviarla al formulario correspondiente para su visualización. De forma similar, el método loadTicketsData gestiona la obtención y visualización de datos de boletos adquiridos por el usuario. Estos métodos están diseñados para manejar posibles errores, como datos nulos o vacíos, con mensajes de depuración para facilitar la solución de problemas.
 
@@ -622,11 +623,9 @@ La interfaz gráfica se construye con Swing, utilizando paneles y componentes pe
 
 En resumen, esta clase no solo ofrece una interfaz gráfica funcional, sino que también integra la lógica necesaria para proporcionar una experiencia personalizada, eficiente y adaptable a las necesidades de los clientes. La estructura modular y el uso de patrones de diseño aseguran que sea fácil de mantener y extender en el futuro.
 
-![2024-12-17 21_12_57-](https://github.com/user-attachments/assets/9e929656-130c-4781-8445-4890999564bf)
-![2024-12-17 21_13_52-](https://github.com/user-attachments/assets/c9eace7e-0653-4096-a89d-baea3f9c564e)
-![2024-12-17 21_15_32-](https://github.com/user-attachments/assets/48cdbeb5-4d53-4978-acde-eadfe6d5e44b)
+![2024-12-17 21_11_35-](https://github.com/user-attachments/assets/8d6e0940-375a-49a5-8aaa-2831269cbc20)
 
-
+![2024-12-17 21_11_57-](https://github.com/user-attachments/assets/7620f239-0da0-48a0-a676-62741e3edfe1)
 
 
 
